@@ -36,7 +36,7 @@ export function Create(): JSX.Element {
                                     placeholder={intl.formatMessage({
                                         id: 'BUILDER_CREATE_FIELD_PLACEHOLDER_NAME',
                                     })}
-                                    isValid={creatingToken.name.length > 0 && creatingToken.name.length < 255}
+                                    isValid={creatingToken.name.length > 0 && creatingToken.name.length < 10000}
                                     value={creatingToken.name}
                                     onChange={creatingTokenForm.onChangeData('name')}
                                 />
@@ -54,7 +54,7 @@ export function Create(): JSX.Element {
                                     placeholder={intl.formatMessage({
                                         id: 'BUILDER_CREATE_FIELD_PLACEHOLDER_SYMBOL',
                                     })}
-                                    isValid={creatingToken.symbol.length > 0 && creatingToken.symbol.length < 255}
+                                    isValid={creatingToken.symbol.length > 0 && creatingToken.symbol.length < 10000}
                                     value={creatingToken.symbol}
                                     onChange={creatingTokenForm.onChangeData('symbol')}
                                 />

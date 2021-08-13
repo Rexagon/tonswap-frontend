@@ -203,8 +203,8 @@ export class CreateTokenStore {
                 answer_id: processingId,
                 root_public_key: 0,
                 root_owner_address: new Address(this.wallet.address),
-                name: btoa(this.name),
-                symbol: btoa(this.symbol),
+                name: btoa(unescape(encodeURIComponent(this.name))),
+                symbol: btoa(unescape(encodeURIComponent(this.symbol))),
                 decimals: this.decimals,
             }).send({
                 from: new Address(this.wallet.address),
